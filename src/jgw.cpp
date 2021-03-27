@@ -11,7 +11,7 @@
 void StartMusic(double S_HZ, float D_DURATION);
 
 // function printDev
-void PrintDev(int& index, double& SSH_Z, float& CCS_Z);
+void PrintDev(int index, double& SSH_Z, float& CCS_Z);
 
 // function first main
 int main(int argc, const char* argv[])
@@ -31,9 +31,9 @@ int main(int argc, const char* argv[])
 	return 0;
 }
 
-void PrintDev(int& index, double& SSH_Z, float& CCS_Z)
+void PrintDev(int index, double& SSH_Z, float& CCS_Z)
 {
-	std::cout << index + 1 << ". " << (double)SSH_Z << "Hz | ";
+	std::cout << index << ". " << (double)SSH_Z << "Hz | ";
 	std::cout << CCS_Z << "ms" << std::endl;
 }
 
