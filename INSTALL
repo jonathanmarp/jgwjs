@@ -1,0 +1,5 @@
+# install sdl2
+sudo apt-get install libsdl2-dev
+
+# install g++
+sudo apt-get install g++
