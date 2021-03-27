@@ -3,6 +3,9 @@
 > Same as jgw. This is a development version for javascript.
 
 ## !IMPORTANT
+Don't Forget To Install Dependencis If You User Linux.
+`$ apt install libsdl2-dev`
+
 Don't run compileDev.sh or compile Dev.bat. Because the script already has a tool to automatically compile it.
 Actually it is okay if you run it, but it would be good so that you don't have to be tired of compiling it, let alone the script
 
