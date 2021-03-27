@@ -15,6 +15,7 @@ $ git clone https://github.com/jonathanmarp/jgwjs
 If you don't want too many files you can delete the srcTS folder. the location is in `jgwjs/`.
 Do not delete the rest because it will be used when the script runs.
 
+
 If you have entered the `jgwjs/` folder. and enter the `srcJS/` folder again. and press pathFile.js.
 ```javascript
 "use strict";
