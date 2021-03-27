@@ -16,12 +16,12 @@ function Check_File_Its_Exist() {
                 switch (isWin) {
                     case true:
                         {
-                            startExec.startExec("compileDev.bat");
+                            startExec.startExec(pathFile.pathFile.split("/")[0] + "/" + "compileDev.bat");
                         }
                         break;
                     default:
                         {
-                            startExec.startExec("bash compileDev.sh");
+                            startExec.startExec("bash " + pathFile.pathFile.split("/")[0] + "/" + "compileDev.sh");
                         }
                         break;
                 }
