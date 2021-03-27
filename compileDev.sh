@@ -1,6 +1,6 @@
 # compile sound to library
 cd sound
-g++ -c `sdl2-config --cflags --libs` sound.cpp -o libsound.o
+g++ -c sound.cpp -o libsound.o
 ar rcs libsound.a libsound.o
 mv libsound.o bin
 mv libsound.a bin
@@ -9,7 +9,7 @@ cd ..
 # compile to executable
 cd src
 g++ -D_DEV -c jgw.cpp
-g++ -o JGW jgw.o -O3 -foptimize-sibling-calls -L../sound/bin -lsound`sdl2-config --cflags --libs`
+g++ -o JGW jgw.o -O3 -foptimize-sibling-calls -L../sound/bin -lsound `sdl2-config --cflags --libs`
 mv jgw.o bin
 mv JGW ..
 cd ..
