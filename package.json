@@ -10,11 +10,21 @@
     "type": "git",
     "url": "git+https://github.com/jonathanmarp/jgwjs.git"
   },
-  "keywords": ["nodejs", "cpp", "jgw", "sound", "windows", "linux"],
+  "keywords": [
+    "nodejs",
+    "cpp",
+    "jgw",
+    "sound",
+    "windows",
+    "linux"
+  ],
   "author": "jonathanmarp",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jonathanmarp/jgwjs/issues"
   },
-  "homepage": "https://github.com/jonathanmarp/jgwjs#readme"
+  "homepage": "https://github.com/jonathanmarp/jgwjs#readme",
+  "dependencies": {
+    "typescript": "^4.2.3"
+  }
 }
