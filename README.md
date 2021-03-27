@@ -15,22 +15,8 @@ $ git clone https://github.com/jonathanmarp/jgwjs
 If you don't want too many files you can delete the srcTS folder. the location is in `jgwjs/`.
 Do not delete the rest because it will be used when the script runs.
 
+do not change the name of the folder jgwjs.
 
-If you have entered the `jgwjs/` folder. and enter the `srcJS/` folder again. and press pathFile.js.
-```javascript
-"use strict";
-exports.__esModule = true;
-exports.pathFile = void 0;
-// just exporting variable pathFile
-var isWin = process.platform === "win32";
-exports.pathFile = isWin == true ? "jgwjs/bin/JGW.exe" : "jgwjs/bin/JGW";
-```
-
-If you rename the jgwjs folder to any name change the `jgwjs/` to the name you gave or the path to `bin/JGW` or `bin/JGW.exe`.
-I hope you do not change the name of the folder.
-```javascript
-exports.pathFile = isWin == true ? "location/bin/JGW.exe" : "location/bin/JGW";
-```
 ## !MODE DEVELOPMENT
 
 If you want to switch to development mode. The goal is if you play a voice pestle you can know where it went wrong.
