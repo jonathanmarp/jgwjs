@@ -6,7 +6,7 @@ var pathFile = require("./srcJS/pathFile.js");
 var readFile = require("./srcJS/readFile.js");
 var startExec = require("./srcJS/startExec.js");
 // change this is this is development mode
-var development = true;
+var development = false;
 // check file its exist. If not exist this will be run compile script
 function Check_File_Its_Exist() {
     var isWin = process.platform === "win32";
