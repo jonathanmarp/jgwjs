@@ -4,42 +4,45 @@ const checkFile: any = require("./srcJS/checking.js");
 const pathFile: any = require("./srcJS/pathFile.js");
 const readFile: any = require("./srcJS/readFile.js");
 const startExec: any = require("./srcJS/startExec.js");
+const jso: any = require("./jsostream/jsostream");
 
 // change this is this is development mode
 let development: boolean = false;
 
 // check file its exist. If not exist this will be run compile script
-function Check_File_Its_Exist(): void {
+jso.functions(":Check_File_Its_Exist:", (): void => {
 	let isWin: boolean = process.platform === "win32";
 	switch(checkFile.checkFile(pathFile.pathFile)) {
 		case false: {
 			switch(isWin) {
 				case true: {
-					startExec.startExec("compileDev.bat");
+					startExec.startExec(pathFile.pathFile.split("/")[0] + "/" + "compileDev.bat");
 				}
 				break;
 				default: {
-					startExec.startExec("bash compileDev.sh");
+					startExec.startExec("bash " + pathFile.pathFile.split("/")[0] + "/" + "compileDev.sh");
 				}
 				break;
 			}
 		}
 		break;
 	}
-}
+});
 
 // exporting function tone
-export function tone(Freq: number, Duration: number): void {
-	Check_File_Its_Exist();
+jso.functions(":tone:", (Freq: number, Duration: number): void => {
+	jso.call(":Check_File_Its_Exist:");
 
 	development == true ? 
 		console.log(startExec.startExec("./" + pathFile.pathFile + " " + Freq + " " + Duration).toString())
 		: startExec.startExec("./" + pathFile.pathFile + " " + Freq + " " + Duration);
-}
+});
+
+export let tone: Function = jso.importFunctions(":tone:");
 
 // export function toneArray
-export function toneArray(note: Array<Array<number>>) {
-	Check_File_Its_Exist();
+jso.functions(":toneArray:", (note: Array<Array<number>>): void => {
+	jso.call(":Check_File_Its_Exist:");
 
 	let cmd: string = "./" + pathFile.pathFile + " ";
 	for(let i: number  = 0; i < note.length; i++) {
@@ -47,11 +50,13 @@ export function toneArray(note: Array<Array<number>>) {
 	}
 
 	development == true ? console.log(startExec.startExec(cmd).toString()) : startExec.startExec(cmd);
-}
+});
+
+export let toneArray: Function = jso.importFunctions(":toneArray:");
 
 // export function run note file
-export function RunNoteFile(pathFiles: string) {
-	Check_File_Its_Exist();
+jso.functions(":RunNoteFile:", (pathFiles: string): void => {
+	jso.call(":Check_File_Its_Exist:");
 	let code: Array<string> = readFile.readFile(pathFiles).split("\n").join("").split(" ").join("").split(",");
 	let cmd: string = "./" + pathFile.pathFile + " ";
 
@@ -60,4 +65,6 @@ export function RunNoteFile(pathFiles: string) {
 	}
 
 	development == true ? console.log(startExec.startExec(cmd).toString()) : startExec.startExec(cmd);
-}
+});
+
+export let RunNoteFile = jso.importFunctions(":RunNoteFile:");
