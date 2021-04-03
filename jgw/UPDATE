@@ -1,0 +1,33 @@
+# UPDATE BASH SCRIPT
+
+# cloning from github
+git clone https://github.com/jonathanmarp/jgw
+
+# copy all script to this folder
+cp -r jgw/* .
+
+# remove the folder jgw seconds
+rm -rf jgw
+
+# clear the command
+clear
+
+# color in compile
+GREEN="\033[0;32m"
+NC="\033[0m"
+
+# Echo
+printf "================================\n"
+printf " Success For Update Source Code \n"
+printf "================================\n"
+printf "Version: ${GREEN}2.1${NC}\n"
+printf "\n"
+printf "Description: \n"
+printf "Link https://github.com/jonathanmarp/jgw.\nPlaying a Simple Piano\n"
+printf "\n"
+printf "Topics: \n"
+printf "${GREEN}C++${NC}, ${GREEN}Simple${NC}, ${GREEN}Piano${NC}\n"
+printf "\n"
+printf "Build Instruction: \n"
+printf "Linux: \n"
+printf "$ bash build.sh\n"

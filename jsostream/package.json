@@ -1,0 +1,15 @@
+{
+  "name": "jsostream",
+  "version": "1.0.0",
+  "description": "Fast Library For Javascript",
+  "main": "jsostream.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "jomaingilbert",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.1.2"
+  }
+}
